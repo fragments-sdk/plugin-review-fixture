@@ -44,15 +44,24 @@ published controls or claims to expose their entire API.
 ## Tokens and provenance
 
 `src/main.tsx` imports the package's complete CSS and then `design/tokens.css`.
-That file copies seven exact default token definitions from the pinned published
+That file copies eight exact default token definitions from the pinned published
 CSS, with dependencies included. `design/provenance.json` records the upstream
 CSS hash and selected values. `npm run verify:tokens` compares them against the
 installed public package. This snapshot is a small fixture vocabulary, not the
 whole upstream contract or every theme mode.
 
-The selected color `#f56138` maps to `--fui-seed-brand` in this snapshot. A future
-hosted repair test must first confirm the approved token lookup returns that
-unambiguous mapping; it must not assume the lookup succeeded.
+The repair example uses `#c44732`, the exact published default value of
+`--fui-color-danger`. Its name supplies color-purpose evidence, and its literal
+`:root` snapshot has no aliases or alternate modes. The existing
+`--fui-seed-brand` token remains available, but its extracted purpose is unknown;
+the checker correctly withholds automatic color repair using that seed.
+
+Upstream also assigns `--fui-color-danger` from `--fui-seed-danger` inside an
+`@supports` rule. This fixture intentionally selects the first literal default
+declaration and applies it as an unlayered override. It does not reproduce
+upstream theme or seed overrides. Before a hosted repair test, confirm that the
+approved token lookup returns this exact, unambiguous snapshot mapping, then
+check the returned code; offline evidence does not establish Cloud approval.
 
 ## Establish the real Cloud contract
 
@@ -63,7 +72,12 @@ props and approved source identities before the settings-page review can pass.
 ## Validation already performed
 
 - Public npm install, strict TypeScript check and Vite production build passed.
-- All seven token snapshot definitions match the pinned package's CSS.
+- All eight token snapshot definitions match their first declarations in the
+  pinned package's CSS. The verifier also rejects a matching snapshot/provenance
+  pair whose value differs from upstream.
+- Offline extraction and the shared conform engine replace the repair example
+  with `var(--fui-color-danger)` in one deterministic change. The original seed
+  remains ineligible for automatic color repair. See `evidence/color-repair.json`.
 - Local source scan extracted all five adapter declarations and their props.
 - Local CLI check of the three application TSX/CSS files passed with zero findings
   under the declared four active rules. No baseline or suppression was used.
@@ -80,6 +94,10 @@ upstream `use client` directive warnings; the client-only app built successfully
 No hooks were installed or exercised in this fixture. Local validation did not
 change any production account, Cloud contract or entitlement. Publishing this
 source repository does not provision a reviewer account or Cloud authority.
+`evidence/validation.json` distinguishes the checks rerun for the eighth token
+and Vite 7.3.6 update from retained checks of the unchanged settings page and
+adapter sources. The browser checks predate the Vite update and have not been
+repeated with that version.
 
 ## License
 

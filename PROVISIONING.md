@@ -4,11 +4,9 @@ These are future operator steps. They were not performed while preparing this
 fixture. No credentials belong in this directory or a public repository.
 
 1. Use https://github.com/fragments-sdk/plugin-review-fixture. The audited fixture
-   is on `codex/reviewer-fixture` until its pull request is merged; use the exact
-   reviewed commit for provisioning. The local source archive excludes node_modules,
-   dist, .fragments, environment files and credentials. Its SHA-256 is recorded
-   in the adjacent `reviewer-fixture-source.tar.gz.sha256` distribution receipt
-   (outside the archive to avoid a self-referential checksum).
+   must use an exact reviewed commit merged to `main` for provisioning. Source
+   distributions must exclude node_modules, dist, .fragments, environment files
+   and credentials.
 2. Use a dedicated, verified review account through ordinary production sign-up
    or the authentication provider's supported user-management UI. Confirm a
    fresh browser can password-sign-in without MFA/SMS/email challenges. Do not
@@ -29,7 +27,7 @@ fixture. No credentials belong in this directory or a public repository.
    primitive or imply the package's full export/prop surface was discovered.
 6. Save the real contract. Record its actual version/FCID, counts, token source
    paths and component identities privately. Intended selection is five named
-   adapters and seven token names, but the returned frozen contract receipt is
+   adapters and eight token names, but the returned frozen contract receipt is
    authoritative. No example or fabricated contract IDs are supplied here.
 7. Connect the reviewer host through OAuth and select the exact dedicated
    organization/project/repository binding. Use the supported MCP read scope;
@@ -42,6 +40,9 @@ fixture. No credentials belong in this directory or a public repository.
    `onCheckedChange` accepts a boolean. If props are missing, do not claim the
    positive settings test is ready; inspect full-scan completion/publication.
 9. Run the five positive and three negative cases in the release review plan.
+   For deterministic color repair, first confirm the approved default snapshot
+   exposes `--fui-color-danger: #c44732` with color semantics, resolved value and
+   no ambiguous mode or alias. Do not use the seed-brand token as a substitute.
    Submit the exact saved code plus filename from reviewer-inputs.json to the
    hosted checker, inspect verdict and coverage, deliver any returned repairs,
    and recheck later edits. The CSS module is a separate submitted file: a TSX

@@ -6,6 +6,7 @@
   "selection": "First declaration of each named token in the published CSS. Values copied unchanged; this is a small fixture snapshot, not the full upstream contract.",
   "tokens": {
     "--fui-seed-brand": "#f56138",
+    "--fui-color-danger": "#c44732",
     "--fui-scale": "1",
     "--fui-text-secondary": "light-dark(rgb(89.0746938133, 84.2307870613, 79.3814506381), #b6b0a8)",
     "--fui-layout-measure-page-narrow": "calc(var(--fui-scale, 1) * 800px)",

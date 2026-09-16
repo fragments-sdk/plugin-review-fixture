@@ -1,0 +1,151 @@
+{
+  "status": "Offline parser and shared conform engine passed; hosted contract/evaluation not exercised",
+  "recordedAt": "2026-09-16T16:43:41.621Z",
+  "fixtureBaseCommit": "701b8bbc5bb18c232935b71cab3410235317205e",
+  "sourceSha256": {
+    "design/tokens.css": "88d30f223b2d5eaabae0af5eff97302a665f07f085f12f71bb6755b5d625e7f2",
+    "design/provenance.json": "e390d50d872b69721b1e9f88e95f5dd612f5883c71a43c343dda5ae9ea799afc",
+    "reviewer-inputs.json": "1b58b9543a850df8570bc469bd2be0217d4a21c4a9aa0767f2132984c9f09b47"
+  },
+  "engine": {
+    "sourceCommit": "d1a1cdc44b841a6e4d940b8bdf8a5adabaccc2aa",
+    "sourceSha256": {
+      "packages/core/src/tokens/semantics.ts": "7b7624de90926c1e293e12848cc5130e5d752ceeaa406353e66f9fd253b71dd8",
+      "packages/core/src/tokens/design-token-parser.ts": "18e1ee23c553ba6f614ba0b12d29e7ff9adda0e3d582e3714865af5a1172ca5b",
+      "packages/engine/src/extract/conform/engine.ts": "b59859fa87f5138066b7c8ca46630e0d5244a365ce5f4028f53a5f6e702cd783"
+    }
+  },
+  "extraction": {
+    "tokenCount": 8,
+    "originalTokensPreserved": 7,
+    "danger": {
+      "name": "--fui-color-danger",
+      "rawValue": "#c44732",
+      "resolvedValue": "#c44732",
+      "category": "color",
+      "semantics": {
+        "schemaVersion": 1,
+        "purpose": "color",
+        "evidence": "name"
+      },
+      "aliases": [],
+      "resolution": "resolved",
+      "level": 1,
+      "referenceChain": [],
+      "sourceFile": "design/tokens.css",
+      "lineNumber": 5,
+      "theme": "default",
+      "mode": "default",
+      "selector": ":root"
+    },
+    "errors": [],
+    "warnings": []
+  },
+  "positive": {
+    "input": {
+      "filename": "src/color-example.css",
+      "code": ".example { color: #c44732; }"
+    },
+    "result": {
+      "conformed": ".example { color: var(--fui-color-danger); }",
+      "changed": true,
+      "summary": "Mapped 1 hardcoded value to Review Fixture tokens.",
+      "designSystem": {
+        "name": "Review Fixture",
+        "importsAdded": []
+      },
+      "changes": [
+        {
+          "kind": "replace-token",
+          "ruleId": "styles/no-raw-color",
+          "code": "FUI2005",
+          "severity": "warning",
+          "message": "Raw color #c44732 on `color`. Use a design token instead.",
+          "before": "#c44732",
+          "after": "var(--fui-color-danger)",
+          "confidence": "high",
+          "location": {
+            "line": 1,
+            "column": 11,
+            "endLine": 1,
+            "endColumn": 16
+          }
+        }
+      ],
+      "suggestions": [],
+      "unresolved": [],
+      "coverage": {
+        "tokens": 5,
+        "components": 0,
+        "evaluated": true
+      }
+    }
+  },
+  "seedNegative": {
+    "input": {
+      "filename": "src/color-example.css",
+      "code": ".example { color: #f56138; }",
+      "apply": "deterministic"
+    },
+    "result": {
+      "conformed": ".example { color: #f56138; }",
+      "changed": false,
+      "summary": "1 item to review.",
+      "designSystem": {
+        "name": "Review Fixture",
+        "importsAdded": []
+      },
+      "changes": [],
+      "suggestions": [
+        {
+          "kind": "review-low-confidence",
+          "message": "Hardcoded color \"#f56138\" is not referenced through a design token.",
+          "hint": "No design token matches this color.",
+          "confidence": "medium",
+          "location": {
+            "line": 1,
+            "column": 11,
+            "endLine": 1,
+            "endColumn": 16
+          }
+        }
+      ],
+      "unresolved": [],
+      "coverage": {
+        "tokens": 5,
+        "components": 0,
+        "evaluated": true
+      }
+    }
+  },
+  "recheck": {
+    "input": {
+      "filename": "src/color-example.css",
+      "code": ".example { color: var(--fui-color-danger); }"
+    },
+    "result": {
+      "conformed": ".example { color: var(--fui-color-danger); }",
+      "changed": false,
+      "summary": "No design-system issues found in this snippet.",
+      "designSystem": {
+        "name": "Review Fixture",
+        "importsAdded": []
+      },
+      "changes": [],
+      "suggestions": [],
+      "unresolved": [],
+      "coverage": {
+        "tokens": 5,
+        "components": 0,
+        "evaluated": true
+      }
+    }
+  },
+  "provenanceNegative": {
+    "case": "Matching modified snapshot and provenance must still fail upstream verification",
+    "mutation": "--fui-color-danger changed to #000001 in both files in a temporary directory",
+    "exitCode": 1,
+    "expectedError": "Upstream first declaration mismatch: --fui-color-danger"
+  },
+  "caveat": "The unlayered fixture snapshot selects exact first default declarations. It intentionally does not reproduce upstream @supports, seed, or theme overrides."
+}
