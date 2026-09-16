@@ -1,27 +1,71 @@
 {
-  "status": "local checks passed; live provisioning pending",
+  "status": "Local eighth-token and Vite patch revisions validated; live approval and hosted repair still require verification",
+  "recordedAt": "2026-09-16T16:46:15.590Z",
   "dependencies": "public npm only, pinned lockfile, install scripts disabled",
   "checks": {
-    "build": "tsc --noEmit && vite build: exit 0",
-    "tokenProvenance": "seven exact source declarations: passed",
-    "localGovernance": "three app files, four active rules, zero findings",
-    "offlineHostedProps": "five adapters retained, partial children diagnostics preserved",
-    "browser": "labels, edit, keyboard switch, save status, reload reset, mobile overflow and errors checked"
+    "install": {
+      "command": "npm ci --ignore-scripts",
+      "exitCode": 0,
+      "summary": "added 32 packages, and audited 33 packages in 4s\n1 low severity vulnerability"
+    },
+    "tokenProvenance": {
+      "command": "npm run verify:tokens",
+      "exitCode": 0,
+      "summary": "Verified 8 exact tokens from @usefragments/ui@3.1.2"
+    },
+    "build": {
+      "command": "npm run build",
+      "exitCode": 0,
+      "warnings": {
+        "moduleLevelUseClient": 343
+      }
+    },
+    "audit": {
+      "command": "npm audit --json",
+      "exitCode": 1,
+      "evidence": "evidence/npm-audit.json",
+      "vulnerabilities": {
+        "info": 0,
+        "low": 1,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 1
+      }
+    }
+  },
+  "offlineColorRepair": {
+    "evidence": "evidence/color-repair.json",
+    "tokenCount": 8,
+    "originalTokensPreserved": 7,
+    "deterministicChanges": 1,
+    "seedAutoRepaired": false,
+    "recheckSuggestions": 0,
+    "provenanceTamperRejected": true,
+    "note": "Previously executed against these unchanged token inputs and shared parser/conform sources; the Vite dependency update does not rerun that offline proof."
+  },
+  "retainedPriorChecks": {
+    "note": "Not rerun for this revision. Application TSX/CSS and adapter sources are unchanged, but Vite changed from 7.3.1 to 7.3.6; prior browser checks do not validate the updated Vite runtime. Other dependency versions are unchanged.",
+    "checks": {
+      "localGovernance": "three app files, four active rules, zero findings",
+      "offlineHostedProps": "five adapters retained, partial children diagnostics preserved",
+      "browser": "labels, edit, keyboard switch, save status, reload reset, mobile overflow and errors checked"
+    }
   },
   "sourceSha256": {
     ".gitignore": "0748e4bcebaabeaa44913de080264c3c17a3d9473393800efc943a9c60ac44af",
     "LICENSE": "99a74ede34e3b3ae9e100ad9b403ab092a2e59ab272bd34fb39ee567adb87930",
-    "PROVISIONING.md": "28c70cd452a43cbacce2f3d75a67e4b87df72b405ea87a95616f239311f0d277",
-    "README.md": "efead14deee5f211ec24a76a3cd68d5785cce4492eb6c206ca09d06d15859366",
-    "THIRD_PARTY_NOTICES.md": "3859499a5387e8acb5a92a448fe7aa199e5ee97499de6d8794669daf526ad623",
-    "design/provenance.json": "f8e00835c10c35128a9909d73d54697fa14dc013aae1fb08a0aaf88eeba5b123",
-    "design/tokens.css": "7cee7769369efd679e4765ccfea6901c27eb17104617c20c8beb94d6ad4210c7",
+    "PROVISIONING.md": "4dc5dcb72b4255a5077d8b56c885ef8e5144c178c647c0bf9f3d24088a58f66f",
+    "README.md": "b44c12ad616fa57452cf04a851a0b9e0ce595334377b79ae32c0515bc6a4fb17",
+    "THIRD_PARTY_NOTICES.md": "72368a6aae2233c5e9aa0b99985eb43a09836fa021e67e875a597cd0d73c21f2",
+    "design/provenance.json": "e390d50d872b69721b1e9f88e95f5dd612f5883c71a43c343dda5ae9ea799afc",
+    "design/tokens.css": "88d30f223b2d5eaabae0af5eff97302a665f07f085f12f71bb6755b5d625e7f2",
     "fragments.config.json": "b6af708ab229eeb8c96dcb6f240a3152ea8873f0e5d76973e5ece2ff8cdf19b4",
     "index.html": "4387f8c86503a779c8bc31e1b4413a3f90e3583ea52b2d87d02da0d3f3aaa039",
-    "package-lock.json": "a598769df60384c1927ff373ceaf34c96669ed1d3d7066b9e80dacdc22e99dad",
-    "package.json": "480f9e407e84a64c69a130c58d45766f360248952d29088b0079bdd87377a41d",
-    "reviewer-inputs.json": "62ffdeea1c9b2fd3e86094a5d008c200c8ef47ec0fe7b472aec73dfb12795910",
-    "scripts/verify-token-provenance.mjs": "ba7e46c0f38d32ae6d68417163a0970365d173dafe4085044f2712fac105430d",
+    "package-lock.json": "8c30fd1f0538161ab92ba7e80abb5ca7d93f2058510a962403c64d9d8d88b421",
+    "package.json": "bd64ebee3ecaacca2053dff2859f380e062f44a84af1a804029252d680d3c930",
+    "reviewer-inputs.json": "1b58b9543a850df8570bc469bd2be0217d4a21c4a9aa0767f2132984c9f09b47",
+    "scripts/verify-token-provenance.mjs": "1a66c3d96839059f02299e4a3ca5a0bff617f7ae3cbcc0e0a93a663cc00939d0",
     "src/SettingsPage.module.css": "cc75235ac133defb882a700a39af524cb425719bcc243feb35a6520202808e6d",
     "src/SettingsPage.tsx": "9b1ce2ac684c1e5ab8212f1923a92de5e9b26b2b3cdfd6758ac176764bb57306",
     "src/main.tsx": "6523f5e39aaf135d334bb48f51a7cff567738ae995933fc3032cb66445c819d0",
@@ -31,5 +75,12 @@
     "ui/Field.tsx": "847b7574896e22fdab3a4e768de380ecf3aeb3f7f489d209b3845fd9683885f5",
     "ui/Input.tsx": "d8a33374ca324648c11935f720c4db5d7916cbef6d2b13acfbb9f8f026521ac0",
     "ui/Switch.tsx": "b2eda5423064ea8671fc855b9de4746259abe103f2e31e5e12b4a6493c666194"
+  },
+  "dependencyRevision": {
+    "vite": {
+      "before": "7.3.1",
+      "after": "7.3.6"
+    },
+    "otherDependencyVersionsUnchanged": true
   }
 }

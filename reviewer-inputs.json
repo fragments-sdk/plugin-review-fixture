@@ -14,7 +14,7 @@
   ],
   "deterministicRepairInput": {
     "filename": "src/color-example.css",
-    "code": ".example { color: #f56138; }",
+    "code": ".example { color: #c44732; }",
     "requires": "Confirm approved unique token mapping before conform; evaluate returned code before claiming a pass."
   }
 }

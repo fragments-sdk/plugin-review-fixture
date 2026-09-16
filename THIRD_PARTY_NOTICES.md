@@ -5,7 +5,7 @@ The package declares the MIT license and Conan McNicholl as its author.
 
 - Package: https://www.npmjs.com/package/@usefragments/ui/v/3.1.2
 - Upstream: https://github.com/fragments-sdk/fragments/tree/main/libs/ui
-- Copied material: seven default CSS variable declarations in `design/tokens.css`,
+- Copied material: eight default CSS variable declarations in `design/tokens.css`,
   selected from the published `dist/assets/ui.css`.
 - Exact package version, source CSS hash and selected values: `design/provenance.json`.
 
