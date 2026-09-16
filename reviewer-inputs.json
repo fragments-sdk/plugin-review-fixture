@@ -1,0 +1,20 @@
+{
+  "status": "proposed inputs; hosted evaluation pending",
+  "savedFiles": [
+    {
+      "filename": "src/SettingsPage.tsx",
+      "sha256": "9b1ce2ac684c1e5ab8212f1923a92de5e9b26b2b3cdfd6758ac176764bb57306",
+      "code": "import { useState, type FormEvent } from 'react';\nimport { Button } from '../ui/Button';\nimport { Card } from '../ui/Card';\nimport { Field } from '../ui/Field';\nimport { Input } from '../ui/Input';\nimport { Switch } from '../ui/Switch';\nimport styles from './SettingsPage.module.css';\n\n/** Demo data stays in this mounted React page; nothing is sent or persisted. */\nexport function SettingsPage() {\n  const [name, setName] = useState('Alex Reviewer');\n  const [email, setEmail] = useState('alex@example.com');\n  const [notifications, setNotifications] = useState(true);\n  const [saved, setSaved] = useState(false);\n  function save(event: FormEvent<HTMLFormElement>) {\n    event.preventDefault();\n    setSaved(true);\n  }\n  return <main className={styles.page}>\n    <h1>Account settings</h1>\n    <p className={styles.intro}>Local reviewer demo. Changes stay in this page and reset when you reload.</p>\n    <Card title=\"Profile and preferences\" description=\"Choose how your demo profile appears and which updates you receive.\">\n      <form className={styles.form} onSubmit={save} onChange={() => setSaved(false)}>\n        <Field name=\"name\" label=\"Profile name\" value={name} onChange={setName} />\n        <Input name=\"email\" label=\"Email\" type=\"email\" value={email} autoComplete=\"email\" required onChange={setEmail} />\n        <Switch label=\"Email notifications\" checked={notifications} onCheckedChange={(checked) => { setNotifications(checked); setSaved(false); }} />\n        <div className={styles.actions}><Button type=\"submit\">Save changes</Button><p role=\"status\">{saved ? 'Saved for this demo session. Your real account is unchanged.' : ''}</p></div>\n      </form>\n    </Card>\n  </main>;\n}\n"
+    },
+    {
+      "filename": "src/SettingsPage.module.css",
+      "sha256": "cc75235ac133defb882a700a39af524cb425719bcc243feb35a6520202808e6d",
+      "code": ".page { max-width: var(--fui-layout-measure-page-narrow); margin-inline: auto; padding: var(--fui-raw-space-32) var(--fui-raw-space-24); }\n.intro { color: var(--fui-text-secondary); margin-block: var(--fui-raw-space-16) var(--fui-raw-space-24); }\n.form { display: grid; gap: var(--fui-raw-space-24); }\n.actions { display: grid; justify-items: start; gap: var(--fui-raw-space-16); }\n"
+    }
+  ],
+  "deterministicRepairInput": {
+    "filename": "src/color-example.css",
+    "code": ".example { color: #f56138; }",
+    "requires": "Confirm approved unique token mapping before conform; evaluate returned code before claiming a pass."
+  }
+}

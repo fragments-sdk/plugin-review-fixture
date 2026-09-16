@@ -1,0 +1,163 @@
+{
+  "status": "passed",
+  "scope": "Offline source-memory Cloud extraction -> Cloud component detail normalization -> hosted MCP primitive serializer; no live approval or Cloud request",
+  "componentCount": 5,
+  "diagnostics": [
+    {
+      "code": "prop_metadata_partial",
+      "severity": "info",
+      "message": "Prop metadata for Button is partial; strict unknown-prop enforcement should not use it as a closed schema.",
+      "filePath": "ui/Button.tsx"
+    },
+    {
+      "code": "prop_metadata_partial",
+      "severity": "info",
+      "message": "Prop metadata for Card is partial; strict unknown-prop enforcement should not use it as a closed schema.",
+      "filePath": "ui/Card.tsx"
+    }
+  ],
+  "props": {
+    "Button": {
+      "children": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "unknown"
+      },
+      "disabled": {
+        "conditional": false,
+        "description": "",
+        "required": false,
+        "type": "boolean | undefined"
+      },
+      "onClick": {
+        "conditional": false,
+        "description": "",
+        "required": false,
+        "type": "(() => void) | undefined"
+      },
+      "type": {
+        "conditional": false,
+        "default": "button",
+        "description": "",
+        "required": false,
+        "type": "\"button\" | \"submit\" | \"reset\" | undefined"
+      }
+    },
+    "Card": {
+      "children": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "unknown"
+      },
+      "description": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      },
+      "title": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      }
+    },
+    "Field": {
+      "label": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      },
+      "name": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      },
+      "onChange": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      "value": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      }
+    },
+    "Input": {
+      "autoComplete": {
+        "conditional": false,
+        "description": "",
+        "required": false,
+        "type": "string | undefined"
+      },
+      "label": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      },
+      "name": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      },
+      "onChange": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "(value: string) => void"
+      },
+      "required": {
+        "conditional": false,
+        "description": "",
+        "required": false,
+        "type": "boolean | undefined"
+      },
+      "type": {
+        "conditional": false,
+        "default": "text",
+        "description": "",
+        "required": false,
+        "type": "\"text\" | \"email\" | undefined"
+      },
+      "value": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      }
+    },
+    "Switch": {
+      "checked": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "boolean",
+        "values": [
+          "false",
+          "true"
+        ]
+      },
+      "label": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "string"
+      },
+      "onCheckedChange": {
+        "conditional": false,
+        "description": "",
+        "required": true,
+        "type": "(checked: boolean) => void"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "local checks passed; live provisioning pending",
+  "dependencies": "public npm only, pinned lockfile, install scripts disabled",
+  "checks": {
+    "build": "tsc --noEmit && vite build: exit 0",
+    "tokenProvenance": "seven exact source declarations: passed",
+    "localGovernance": "three app files, four active rules, zero findings",
+    "offlineHostedProps": "five adapters retained, partial children diagnostics preserved",
+    "browser": "labels, edit, keyboard switch, save status, reload reset, mobile overflow and errors checked"
+  },
+  "sourceSha256": {
+    ".gitignore": "0748e4bcebaabeaa44913de080264c3c17a3d9473393800efc943a9c60ac44af",
+    "LICENSE": "99a74ede34e3b3ae9e100ad9b403ab092a2e59ab272bd34fb39ee567adb87930",
+    "PROVISIONING.md": "28c70cd452a43cbacce2f3d75a67e4b87df72b405ea87a95616f239311f0d277",
+    "README.md": "efead14deee5f211ec24a76a3cd68d5785cce4492eb6c206ca09d06d15859366",
+    "THIRD_PARTY_NOTICES.md": "3859499a5387e8acb5a92a448fe7aa199e5ee97499de6d8794669daf526ad623",
+    "design/provenance.json": "f8e00835c10c35128a9909d73d54697fa14dc013aae1fb08a0aaf88eeba5b123",
+    "design/tokens.css": "7cee7769369efd679e4765ccfea6901c27eb17104617c20c8beb94d6ad4210c7",
+    "fragments.config.json": "b6af708ab229eeb8c96dcb6f240a3152ea8873f0e5d76973e5ece2ff8cdf19b4",
+    "index.html": "4387f8c86503a779c8bc31e1b4413a3f90e3583ea52b2d87d02da0d3f3aaa039",
+    "package-lock.json": "a598769df60384c1927ff373ceaf34c96669ed1d3d7066b9e80dacdc22e99dad",
+    "package.json": "480f9e407e84a64c69a130c58d45766f360248952d29088b0079bdd87377a41d",
+    "reviewer-inputs.json": "62ffdeea1c9b2fd3e86094a5d008c200c8ef47ec0fe7b472aec73dfb12795910",
+    "scripts/verify-token-provenance.mjs": "ba7e46c0f38d32ae6d68417163a0970365d173dafe4085044f2712fac105430d",
+    "src/SettingsPage.module.css": "cc75235ac133defb882a700a39af524cb425719bcc243feb35a6520202808e6d",
+    "src/SettingsPage.tsx": "9b1ce2ac684c1e5ab8212f1923a92de5e9b26b2b3cdfd6758ac176764bb57306",
+    "src/main.tsx": "6523f5e39aaf135d334bb48f51a7cff567738ae995933fc3032cb66445c819d0",
+    "tsconfig.json": "115f63f790d0cf60ec951f1ce30b2d0638d301c5016089521b05ddf3da0e32b4",
+    "ui/Button.tsx": "5c86731b30be7d1131a601b8d85c90d82f6122669ac820e996ea5b4e0b83d935",
+    "ui/Card.tsx": "a250a40c7be86e0cffeeaafaa26bae5d93d1eccaba3340594eeacc11870e1b1d",
+    "ui/Field.tsx": "847b7574896e22fdab3a4e768de380ecf3aeb3f7f489d209b3845fd9683885f5",
+    "ui/Input.tsx": "d8a33374ca324648c11935f720c4db5d7916cbef6d2b13acfbb9f8f026521ac0",
+    "ui/Switch.tsx": "b2eda5423064ea8671fc855b9de4746259abe103f2e31e5e12b4a6493c666194"
+  }
+}

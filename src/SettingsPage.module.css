@@ -1,0 +1,4 @@
+.page { max-width: var(--fui-layout-measure-page-narrow); margin-inline: auto; padding: var(--fui-raw-space-32) var(--fui-raw-space-24); }
+.intro { color: var(--fui-text-secondary); margin-block: var(--fui-raw-space-16) var(--fui-raw-space-24); }
+.form { display: grid; gap: var(--fui-raw-space-24); }
+.actions { display: grid; justify-items: start; gap: var(--fui-raw-space-16); }

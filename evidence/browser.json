@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "labels": true,
+  "edit": true,
+  "keyboardSwitch": true,
+  "saveStatus": true,
+  "reloadResets": true,
+  "mobileNoOverflow": true,
+  "pageErrors": 0
+}
