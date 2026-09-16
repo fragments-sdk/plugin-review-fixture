@@ -1,0 +1,11 @@
+/* Selected default tokens from @usefragments/ui 3.1.2 dist/assets/ui.css.
+ * Copyright (c) 2024-present Conan McNicholl. MIT; see THIRD_PARTY_NOTICES.md. */
+:root {
+  --fui-seed-brand: #f56138;
+  --fui-scale: 1;
+  --fui-text-secondary: light-dark(rgb(89.0746938133, 84.2307870613, 79.3814506381), #b6b0a8);
+  --fui-layout-measure-page-narrow: calc(var(--fui-scale, 1) * 800px);
+  --fui-raw-space-16: calc(var(--fui-scale, 1) * 16px);
+  --fui-raw-space-24: calc(var(--fui-scale, 1) * 24px);
+  --fui-raw-space-32: calc(var(--fui-scale, 1) * 32px);
+}

@@ -1,0 +1,68 @@
+{
+  "app": {
+    "include": [
+      "src/**/*.{tsx,css}"
+    ]
+  },
+  "tokens": {
+    "include": [
+      "design/tokens.css"
+    ]
+  },
+  "govern": {
+    "canonicalSources": [
+      {
+        "kind": "directory",
+        "path": "ui",
+        "include": [
+          "Button",
+          "Card",
+          "Field",
+          "Input",
+          "Switch"
+        ]
+      }
+    ],
+    "rules": {
+      "components/prefer-library": {
+        "enabled": true,
+        "severity": "error",
+        "options": {
+          "canonicalMappings": [
+            {
+              "name": "Button",
+              "htmlEquivalent": "button",
+              "importPath": "../ui/Button",
+              "propMapping": [
+                {
+                  "rawProp": "type",
+                  "canonicalProp": "type"
+                }
+              ]
+            },
+            {
+              "name": "Input",
+              "htmlEquivalent": "input",
+              "importPath": "../ui/Input"
+            }
+          ]
+        }
+      }
+    },
+    "styles": [
+      {
+        "kind": "style.rawColors.forbid",
+        "severity": "error",
+        "prefer": "token",
+        "except": [
+          "transparent",
+          "currentColor"
+        ]
+      },
+      {
+        "kind": "style.cssVars.mustBeDefined",
+        "severity": "error"
+      }
+    ]
+  }
+}

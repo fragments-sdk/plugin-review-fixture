@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "scope": "Local authored policy in isolated consumer; not Cloud authority, hook proof, dependency certification or live hosted result",
+  "filesScanned": 3,
+  "rulesActive": 4,
+  "findings": 0,
+  "ignoredCount": 0,
+  "baselined": 0,
+  "integrity": "healthy",
+  "exitCode": 0
+}

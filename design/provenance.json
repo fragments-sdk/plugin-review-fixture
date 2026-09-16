@@ -1,0 +1,20 @@
+{
+  "package": "@usefragments/ui",
+  "version": "3.1.2",
+  "source": "dist/assets/ui.css",
+  "sourceSha256": "95b11046e22cb00dd09eaf7e427369930e2f4bfea14c70b3d5e4720a247623a7",
+  "selection": "First declaration of each named token in the published CSS. Values copied unchanged; this is a small fixture snapshot, not the full upstream contract.",
+  "tokens": {
+    "--fui-seed-brand": "#f56138",
+    "--fui-scale": "1",
+    "--fui-text-secondary": "light-dark(rgb(89.0746938133, 84.2307870613, 79.3814506381), #b6b0a8)",
+    "--fui-layout-measure-page-narrow": "calc(var(--fui-scale, 1) * 800px)",
+    "--fui-raw-space-16": "calc(var(--fui-scale, 1) * 16px)",
+    "--fui-raw-space-24": "calc(var(--fui-scale, 1) * 24px)",
+    "--fui-raw-space-32": "calc(var(--fui-scale, 1) * 32px)"
+  },
+  "license": "MIT",
+  "copyright": "Copyright (c) 2024-present Conan McNicholl",
+  "licenseNotice": "../THIRD_PARTY_NOTICES.md",
+  "packageUrl": "https://www.npmjs.com/package/@usefragments/ui/v/3.1.2"
+}
